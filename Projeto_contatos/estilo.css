@@ -1,0 +1,41 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: aqua;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-title{
+    color: #385555;
+}
+.list-wrapper{
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+.list{
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.list-item{
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 16px;
+    
+}
+
+.list-item__imagem img{
+    border-radius: 50% ;
+}

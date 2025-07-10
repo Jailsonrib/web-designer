@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Examples</title>
+
+    <style>
+        /* Estilos base para todos os contêineres flex */
+        .container{
+            display: flex;
+           justify-content: center;
+            border: 2px solid red; /* Borda vermelha para visualização */
+            height: 350px;
+            gap:50px; /* Altura fixa para o contêiner */
+            flex-flow: row wrap; /* Atalho para flex-direction: row e flex-wrap: wrap */
+        }
+        /* Estilos base para todos os itens flex */
+        .container div{
+            border: 2px solid rgb(148, 148, 107); /* Borda para visualização */
+            width: 100px;
+             /* Largura padrão para os itens flex */
+        }
+
+        /* flex-container1: Demonstra o flex-flow: row wrap padrão */
+        .flex-container1{
+           flex-flow: row wrap; /* Os itens fluem em uma linha e quebram para a próxima linha se o espaço for insuficiente */
+        }
+
+        /* flex-container2: Demonstra justify-content: space-evenly */
+        .flex-container2{
+          justify-content: space-evenly; /* Distribui os itens uniformemente com espaço igual ao redor e entre eles */
+        }
+        .flex-container2 div{
+            width: 50px; /* Largura menor para os itens neste contêiner */
+        }
+
+        /* flex-container3: Demonstra justify-content: space-around e align-items: center */
+        .flex-container3{
+            justify-content: space-around; /* Distribui os itens com espaço igual em ambos os lados de cada item */
+            align-items: center; /* Alinha os itens ao longo do eixo cruzado (verticalmente em um layout de linha) para o centro */
+        }
+        .flex-container3 div{
+            width: 35px; /* Largura menor para os itens */
+            margin: 0; /* Remove a margem padrão */
+        }
+
+        /* flex-container6: Demonstra flex-direction: row-reverse, justify-content: flex-end e align-items: flex-start */
+        .flex-container6{
+            justify-content: flex-end; /* Alinha os itens ao final do eixo principal */
+            align-items: flex-start; /* Alinha os itens ao início do eixo cruzado */
+            flex-direction: row-reverse; /* Organiza os itens em ordem inversa ao longo da linha */
+        }
+        .flex-container6 div{
+            background-color: yellow; /* Fundo amarelo para os itens */
+            width: 50px; /* Largura fixa */
+            height: 50px; /* Altura fixa */
+        }
+
+        /* flex-container7: Demonstra justify-content: center, align-items: center e flex-basis */
+        .flex-container7{
+            justify-content: center; /* Centraliza os itens ao longo do eixo principal */
+            align-items: center; /* Centraliza os itens ao longo do eixo cruzado */
+            flex-direction: row; /* Organiza os itens em uma linha (padrão) */
+        }
+        .flex-container7 div{
+            background-color: rgb(36, 33, 193); /* Fundo azul para os itens */
+            width: 50px; /* Largura fixa */
+            height: 50px; /* Altura fixa */
+        }
+        .flex-container7 .div2{
+          flex-basis: 200px; /* Define o tamanho inicial deste item flex antes de qualquer crescimento ou encolhimento */
+        }
+
+        /* flex-container8: Demonstra gap e flex-grow */
+        .flex-container8{
+           justify-content: center; /* Centraliza os itens ao longo do eixo principal */
+           align-items: center; /* Centraliza os itens ao longo do eixo cruzado */
+           gap: 15px; /* Define o espaçamento entre os itens flex */
+        }
+        .flex-container8 div{
+          flex-basis: 50px; /* Define o tamanho inicial dos itens flex */
+          background-color: orange; /* Fundo laranja para os itens */
+        }
+        .flex-container8 .div2{
+           flex-grow: 1; /* Permite que este item cresça e ocupe o espaço disponível, em relação a outros fatores de crescimento */
+        }
+
+        /* flex-container9: Demonstra flex-shrink e a propriedade abreviada flex */
+        .flex-container9{
+           justify-content: center; /* Centraliza os itens ao longo do eixo principal */
+           align-items: center; /* Centraliza os itens ao longo do eixo cruzado */
+           gap: 10px; /* Define o espaçamento entre os itens flex */
+        }
+        .flex-container9 div{
+          flex-basis: 150px; /* Define o tamanho inicial dos itens flex */
+          margin: 0; /* Remove a margem padrão */
+          background-color: rgb(49, 80, 235); /* Fundo azul escuro para os itens */
+        }
+        .flex-container9 .div1{
+          flex-shrink: 2; /* Permite que este item encolha a uma taxa maior do que outros, se necessário */
+        }
+        
+        .flex-container9 .div3{
+          /* Abreviação para:
+             flex-grow: 1; (Permite que ele cresça)
+             flex-shrink: 3; (Permite que ele encolha a uma taxa maior)
+             flex-basis: 200px; (Define seu tamanho inicial) */
+          flex: 1 3 200px;
+        }
+        .flex-container10 div{
+           
+            background-color: aqua;
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container flex-container1">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3 </div>
+        <div class="div4">4 </div>
+    </div>
+    <div class="container flex-container2">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3 </div>
+        <div class="div4">4 </div>
+    </div>
+    <div class="container flex-container3">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3 </div>
+        <div class="div4">4</div>
+    </div>
+    <div class="container flex-container6">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3 </div>
+        <div class="div4">4</div>
+    </div>
+    <div class="container flex-container7">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="container flex-container8">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="container flex-container9">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    <div class="container flex-container10">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+</body>
+</html>

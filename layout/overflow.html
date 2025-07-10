@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fit Content</title>
+    <style>
+      .container{
+        border: 2px solid black;
+        padding: 16px;
+        width: 300px;
+        margin-bottom: 16px;
+        height: 300px;
+      }
+      .item{
+        background-color: rgb(149, 203, 149);
+        padding: 10px;
+        margin-bottom: 5px;
+        
+      }
+      
+      .fit-content .item{
+        width: fit-content;
+      }
+      .min-content .item{
+        width: min-content;
+      }
+      .max-content .item{
+        width: max-content;
+      }
+      .overflow-hidden{
+        overflow: hidden;
+      }
+      .overflow-scroll{
+        overflow: scroll;
+      }
+      .overflow-auto{
+        overflow: auto;
+      }
+    </style>
+</head>
+<body>
+   <div class="container fit-content overflow-hidden">
+    <div class="item">Lorem</div>
+    <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, quos?</div>
+    <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam labore sed veniam maxime totam saepe illum amet, eaque iste. Adipisci sequi est rem quisquam dicta!</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro dolor ab ad! Ipsam dolor aliquid ratione mollitia, facere, adipisci ad totam consequatur eum fugit in voluptas rem ullam dolore illo autem beatae pariatur at doloremque est fugiat quasi. Vel, eos laudantium praesentium aliquid, atque nulla inventore provident, blanditiis sequi debitis earum? Quo veniam rem officia laudantium quidem quos sint iure! Sed quos neque corporis, quibusdam provident itaque, commodi explicabo voluptatem ullam quod eaque soluta aliquid?</div>
+   </div>
+   
+   
+   <div class="container min-content overflow-scroll overflow-auto">
+    <div class="item">Lorem</div>
+    <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, quos?</div>
+    <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam labore sed veniam maxime totam saepe illum amet, eaque iste. Adipisci sequi est rem quisquam dicta!</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro dolor ab ad! Ipsam dolor aliquid ratione mollitia, facere, adipisci ad totam consequatur eum fugit in voluptas rem ullam dolore illo autem beatae pariatur at doloremque est fugiat quasi. Vel, eos laudantium praesentium aliquid, atque nulla inventore provident, blanditiis sequi debitis earum? Quo veniam rem officia laudantium quidem quos sint iure! Sed quos neque corporis, quibusdam provident itaque, commodi explicabo voluptatem ullam quod eaque soluta aliquid?</div>
+   </div>
+   
+   <div class="container max-content overflow-auto">
+    <div class="item">Lorem</div>
+    <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, quos?</div>
+    <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam labore sed veniam maxime totam saepe illum amet, eaque iste. Adipisci sequi est rem quisquam dicta!</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro dolor ab ad! Ipsam dolor aliquid ratione mollitia, facere, adipisci ad totam consequatur eum fugit in voluptas rem ullam dolore illo autem beatae pariatur at doloremque est fugiat quasi. Vel, eos laudantium praesentium aliquid, atque nulla inventore provident, blanditiis sequi debitis earum? Quo veniam rem officia laudantium quidem quos sint iure! Sed quos neque corporis, quibusdam provident itaque, commodi explicabo voluptatem ullam quod eaque soluta aliquid?</div>
+   </div> 
+</body>
+</html>
