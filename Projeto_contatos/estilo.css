@@ -1,52 +1,133 @@
-
-
+/* --- Estilos Gerais da Página --- */
 body {
+    /* Remove as margens externas padrão do corpo da página */
     margin: 0;
+    /* Remove o preenchimento interno padrão do corpo da página */
     padding: 0;
+    /* Define a altura do corpo para 100% da altura da tela (viewport height) */
     height: 100vh;
+    /* Define a cor de fundo da página como aqua */
     background-color: aqua;
+    /* Define uma lista de fontes para o texto, em ordem de preferência */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display:flex;
+
+    /* --- Centralização com Flexbox --- */
+    /* Ativa o layout flexbox para o corpo da página */
+    display: flex;
+    /* Centraliza os itens horizontalmente (no eixo principal) */
     justify-content: center;
+    /* Centraliza os itens verticalmente (no eixo transversal) */
     align-items: center;
+    /* Organiza os itens em uma coluna, um abaixo do outro */
     flex-direction: column;
 }
-.main-title{
+
+/* --- Título Principal --- */
+.main-title {
+    /* Define a cor do texto do título principal */
     color: #385555;
 }
-.list-wrapper{
+
+/* --- Contêiner da Lista (Caixa Branca) --- */
+.list-wrapper {
+    /* Define a cor de fundo do contêiner como branco */
     background-color: white;
+    /* Define a largura do contêiner para 90% da largura do elemento pai (body) */
     width: 90%;
+    /* Define uma largura máxima para o contêiner, para que não fique muito grande em telas largas */
     max-width: 500px;
+    /* Define uma altura máxima para o contêiner */
     max-height: 400px;
+    /* Adiciona uma barra de rolagem vertical ('auto') se o conteúdo ultrapassar a altura máxima */
     overflow-y: auto;
+    /* Arredonda os cantos do contêiner */
     border-radius: 10px;
+    /* Adiciona uma sombra sutil ao contêiner para dar profundidade */
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
-.list{
+
+/* --- Lista (UL) --- */
+.list {
+    /* Remove os marcadores padrão da lista (bolinhas, números, etc.) */
     list-style-type: none;
+    /* Remove o preenchimento interno padrão da lista */
     padding: 0;
+    /* Remove a margem externa padrão da lista */
+    margin: 0;
 }
 
-
-.list-item{
+/* --- Item da Lista (LI) --- */
+.list-item {
+    /* Ativa o flexbox para alinhar a imagem e o conteúdo lado a lado */
     display: flex;
+    /* Adiciona uma linha na parte inferior de cada item para separá-los */
     border-bottom: 1px solid #eee;
+    /* Adiciona um espaçamento interno em cada item da lista */
     padding: 16px;
-    
 }
 
-.list-item__imagem img{
-    border-radius: 50% ;
+/* --- Imagem do Item da Lista --- */
+.list-item__imagem img {
+    /* Transforma a imagem em um círculo perfeito */
+    border-radius: 50%;
+    /* Define a largura da imagem */
     width: 80px;
 }
 
-.list-itme__content{
- padding: 0 20px ;
- flex-grow: 1; 
+/* --- Conteúdo do Item da Lista (Nome e Email) --- */
+.list-itme__content { /* Corrigido de .list-itme__content */
+    /* Adiciona um espaçamento à esquerda e à direita do conteúdo textual */
+    padding: 0 20px;
+    /* Faz com que esta div ocupe todo o espaço horizontal restante dentro do .list-item */
+    flex-grow: 1;
 }
 
-.list-item__name{
+/* --- Nome no Item da Lista --- */
+.list-item__name {
+    /* Define o tamanho da fonte relativo ao tamanho da fonte do elemento pai */
     font-size: 1.2em;
+    /* Define a cor do texto do nome */
     color: #385555;
+    /* Remove a margem padrão */
+    margin: 0;
+    /* Adiciona um pequeno espaçamento entre as letras */
+    letter-spacing: 1px;
+}
+
+/* --- Email no Item da Lista --- */
+.list-item__email {
+    /* Define a cor do texto do email */
+    color: #aaa;
+    /* Adiciona uma margem de 5px apenas na parte superior do email */
+    margin: 5px 0 0;
+    /* Adiciona um pequeno espaçamento entre as letras */
+    letter-spacing: 1px;
+}
+
+/* --- Efeito Hover no Item da Lista --- */
+.list-item:hover {
+    /* Muda a cor de fundo do item da lista quando o mouse passa por cima */
+    background-color: #f0f0f0;
+    /* Adiciona uma transição suave para a mudança de cor de fundo.
+       A animação durará 500ms (meio segundo) e terá uma curva de velocidade 'ease'. */
+    transition: background-color 500ms ease;
+}
+
+/* --- Contêiner das Ações (Ex: botões de editar/excluir) --- */
+.list-item__action {
+    /* Ativa o flexbox para alinhar os ícones de ação */
+    display: flex;
+    /* Alinha os ícones verticalmente ao centro */
+    align-items: center;
+    /* Define a opacidade inicial como 0, tornando os ícones invisíveis por padrão */
+    opacity: 0;
+    /* Adiciona um espaçamento de 15px entre os ícones de ação */
+    gap: 15px;
+}
+
+/* --- Efeito Hover para Mostrar as Ações --- */
+.list-item:hover .list-item__action {
+    /* Quando o mouse passa sobre o .list-item, o .list-item__action (que está dentro dele)
+       muda sua opacidade para 0.3, tornando-se parcialmente visível. */
+    opacity: .3;
 }
