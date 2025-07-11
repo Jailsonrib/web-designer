@@ -38,4 +38,15 @@ body {
 
 .list-item__imagem img{
     border-radius: 50% ;
+    width: 80px;
+}
+
+.list-itme__content{
+ padding: 0 20px ;
+ flex-grow: 1; 
+}
+
+.list-item__name{
+    font-size: 1.2em;
+    color: #385555;
 }
