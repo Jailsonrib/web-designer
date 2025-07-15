@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesCSS.css">
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
     <title>Document</title>
 </head>
 <body>
-  <header>
-    <nav>
-        <h1>Myserver</h1>
-        <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">planos</a></li>
-            <li><a href="#">suporte</a></li>
-            <li><a href="#">contato</a></li>
-        </ul>
+  <header class="head__content">
+    
+    <nav class="nav__head">
+            <div class="list-head__content_div">
+            <div class="nav-head__content">Myserver</div>
+            <div><a href="#" class="list-head-content__a">home</a></div>
+            <div><a href="#" class="list-head-content__a">planos</a></div>
+            <div><a href="#" class="list-head-content__a">suporte</a></div>
+            <div><a href="#" class="list-head-content__a">contato</a></div>
+            
+        </div>
     </nav>
+    </header>
+    <div ><h1 class="main__title">escolha seu plano</h1></div>
+    <main class="main__content">
+        
 
-    <main>
-        <h1>escolha seu plano</h1>
 
-
-        <section>
-            <article>
-                <header>                 
+        <section class="main-section">
+            <article class="list__article">
+                <header class="head-article">                 
                     <h1>Essencial</h1>
-                    <p>R$ 3.45/mês</p>
+                    <p><strong class="list_prices">R$ 3.45</strong>/mês</p>
                     
                 </header>
-                <ul>
+                <ul class="list-section">
                     <li>1 Website</li>
                     <li>1 GB de Armazenamento</li>
                     <li>10 GB de transferência</li>
@@ -39,14 +43,14 @@
         </section>
 
 
-        <section>
-            <article>
-                <header>
+        <section class="main-section">
+            <article class="list__article">
+                <header class="head-article">
                     <h1>Premium</h1>
-                    <p>R$ 7.95/mês</p>
+                    <p><strong class="list_prices">R$ 7.95</strong>/mês</p>
                     
                 </header>
-                <ul>
+                <ul class="list-section">
                     <li>5 Website</li>
                     <li>3 GB de Armazenamento</li>
                     <li>Transferência ilimitada</li>
@@ -57,14 +61,14 @@
         </section>
 
 
-        <section>
-            <article>
-                <header>
+        <section class="main-section">
+            <article class="list__article">
+                <header class="head-article">
                     <h1>Essencial</h1>
-                    <p>R$ 3.45/mês</p>
+                    <p><strong class="list_prices">R$ 13.95</strong>/mês</p>
                     
                 </header>
-                <ul>
+                <ul class="list-section">
                     <li>10 Website</li>
                     <li>30 GB de Armazenamento</li>
                     <li>Transferência ilimitada</li>
@@ -78,6 +82,6 @@
 
     </main>
     
-  </header>  
+    
 </body>
 </html>
