@@ -78,7 +78,7 @@ body{
 .main-section{
     border-radius: 15px;
     margin-top: 60px;
-    background-color: rgba(87, 87, 87, 0.712);
+    background-color: rgba(24, 20, 20, 0.712);
     display: flex;
     flex-direction: column;
     height: 450px;
