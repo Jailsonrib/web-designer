@@ -55,22 +55,12 @@ body{
 }
 
 .list-head-content__a{
-    text-decoration: none;
-    display:flex;
-    padding: 9px;
-    border-radius: 10px;
-    color: white;
+    
 }
 
 .main-section{
-    border-radius: 15px;
-    margin-top: 60px;
     display: flex;
-    
-    align-items: flex-end;
-    justify-content: center;
-    
-    gap: 50px;
+    gap: 16px;
     
    
    
@@ -82,17 +72,7 @@ body{
     font-size: 17px;
 }
 .div__section{
-    background-color: rgb(26, 24, 24);
-    display: flex;
-    
-
-    flex-direction: column;
-    width: 43vh;
-}
-ul li span{
-
-    letter-spacing: 1px;
-    color: white;
+ flex:1;   
 }
 
 .section_title_h1{
@@ -108,11 +88,4 @@ ul li span{
 
 
 .assine_ja{
- background-color: #a8c623;
- padding: 10px;
- border-radius: 10px;
- text-decoration: none;
-display: flex;
-align-items:flex-end;
-justify-content: space-evenly;
-}
+ 
