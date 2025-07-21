@@ -51,6 +51,7 @@ body{
 .list-head-content__a:hover{
     background-color: #a8c623;
     color: #050202;
+    cursor: default;
 }
 
 .list-head-content__a{
